@@ -1,0 +1,69 @@
+:root {
+    --pseudo-image-url: null;
+    --warning-alert: #fef1c3;
+    --warning-alert-dark: #dcac03;
+    --notice-alert: #cce5ff;
+    --notice-alert-dark: #0070e5;
+    --fatal-alert: #f8d7da;
+    --fatal-alert-dark: #c52231;
+    --parse-alert: #7f7f7f;
+    --parse-alert-dark: #fefefe;
+}
+
+.card b {
+    color: black;
+}
+.warning-wrapper {
+    background-color: var(--warning-alert);
+}
+.warning-wrapper::before {
+    background-color: var(--warning-alert-dark);
+}
+.notice-wrapper {
+    background-color: var(--notice-alert);
+}
+.notice-wrapper::before {
+    background-color: var(--notice-alert-dark);
+}
+.fatal-wrapper {
+    background-color: var(--fatal-alert);
+}
+.fatal-wrapper::before {
+    background-color: var(--fatal-alert-dark);
+}
+.parse-wrapper {
+    background-color: var(--parse-alert);
+}
+.parse-wrapper::before {
+    background-color: var(--parse-alert-dark);
+}
+/* common styles */
+.card {
+    font-size: 1.23rem;
+    border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    padding: 1rem 1rem 1rem 3rem;
+    position: relative;
+    color: #251B37;
+    position: relative;
+}
+.card::before {
+    content: "";
+    display: block;
+    height: 1rem;
+    left: 1rem;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    -webkit-mask-image: var(--pseudo-image-url);
+    mask-image: var(--pseudo-image-url);
+}

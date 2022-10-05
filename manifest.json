@@ -1,0 +1,24 @@
+{
+
+    "manifest_version": 2,
+    "name": "PHP Pretifier",
+    "version": "1.0",
+    "description": "pretify error messages for php scripts",
+    "web_accessible_resources": [
+      "phpPretifier/warning-icon.svg",
+      "phpPretifier/notice-icon.svg"
+    ],
+    "icons": {
+      "48": "phpPretifier/48.png",
+      "96": "phpPretifier/96.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://localhost/*"],
+        "js": ["phpPretifier/script.js"],
+        "css": ["phpPretifier/styles.css"]
+      }
+    ]
+  
+  }
+  
